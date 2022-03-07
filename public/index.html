@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatZone</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    
+
+
+
+    <div class="app">
+        <!-- Join Screen -->
+        <div class="screen join-screen active">
+            <div class="form">
+                <h2 data-text="_____ChatZone">Join ChatZone</h2>
+                <div class="form-input">
+                    <label>Username</label>
+                    <input type="text" id="username" placeholder="Write your Name" required>
+                </div>
+                <div class="form-input">
+                    <button id="join-user" onclick="myfunction()">Join</button>
+                </div>
+            </div>
+            
+        </div>
+        <!-- Chat Screen -->
+        <div class="screen chat-screen">
+            <div class="header">
+                <div class="logo">ChatZone</div>
+                <button id="exit-chat"  onclick="myexitfunction()">Exit</button>
+            </div>
+            <div class="messages">
+                <!-- Your msg -->
+                <!-- <div class="message my-message">
+                    <div>
+                        <div class="name">You</div>
+                        <div class="text">Hi</div>
+                    </div>
+                </div> -->
+                <!-- Update -->
+                <!-- <div class="update">
+                    ABC is Joined to ChatZone
+                </div> -->
+
+                <!-- Other msg -->
+                <!-- <div class="message other-message">
+                    <div>
+                        <div class="name">Other One</div>
+                        <div class="text">Hi</div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="typebox" onsubmit="return sendMessage();">
+                <input type="text" id="message-input" placeholder="Write Your Message here....">
+                <button id="send-message">Send</button>
+            </div>
+
+        </div>
+    </div>
+    
+
+
+
+
+    <script type="text/javascript" src="socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="code.js"></script>
+</body>
+
+</html>
